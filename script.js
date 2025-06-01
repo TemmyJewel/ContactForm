@@ -36,6 +36,7 @@ form.addEventListener("submit", function(e){
         .then(data => {
             errorbox.style.color = "green";
             errorbox.innerHTML = data;
+            form.reset();
         })
         .catch(err => {
             console.error("Fetch error:", err);
